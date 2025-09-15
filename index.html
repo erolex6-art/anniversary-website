@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary My Love</title>
+  <!-- Styles omitted for brevity (already provided earlier) -->
+</head>
+<body>
+  <header>
+    <h1>Happy Anniversary, My Love</h1>
+    <div class="photo-placeholder">Our Photo</div>
+    <div class="counter" id="counter"></div>
+    <div class="audio-player">
+      <button onclick="document.getElementById('bg-music').play()">Play Our Song</button>
+      <audio id="bg-music" src="your-song.mp3"></audio>
+    </div>
+  </header>
+  <section class="timeline">
+    <h2>Our Story</h2>
+    <div class="timeline-item">First meeting – [Add details]</div>
+    <div class="timeline-item">First date – [Add details]</div>
+    <div class="timeline-item">Special milestones – [Add details]</div>
+  </section>
+  <section class="letters">
+    <h2>Love Letters</h2>
+    <div class="letter">Letter 1 – [Your text here]</div>
+    <div class="letter">Letter 2 (unlock later) – [Placeholder]</div>
+  </section>
+  <section class="playlist">
+    <h2>Our Songs</h2>
+    <iframe src="https://open.spotify.com/embed/playlist/placeholder"></iframe>
+  </section>
+  <section class="dreams">
+    <h2>Our Future Dreams</h2>
+    <ul>
+      <li>Travel to [Destination]</li>
+      <li>Do [Dream activity]</li>
+      <li>Build a life together 💕</li>
+    </ul>
+  </section>
+  <section class="secret">
+    <h2>Secret Surprise</h2>
+    <input type="password" id="pwd" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Unlock</button>
+    <div id="secretContent" style="display:none; margin-top:20px;">
+      <video controls width="100%">
+        <source src="your-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <script>
+    const startDate = new Date("2023-07-15");
+    const counterEl = document.getElementById("counter");
+    function updateCounter() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      counterEl.innerText = `We have been together for ${days} days.`;
+    }
+    updateCounter();
+    function checkPassword() {
+      const input = document.getElementById('pwd').value;
+      if (input === 'mypassword') {
+        document.getElementById('secretContent').style.display = 'block';
+      } else {
+        alert('Wrong password!');
+      }
+    }
+  </script>
+</body>
+</html>
