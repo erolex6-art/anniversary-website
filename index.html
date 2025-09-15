@@ -5,24 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Anniversary</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="overlay"></div>
+  <header>
+    <h1>Happy Anniversary, My Love ❤️</h1>
+    <p class="subtitle">Here’s something special, just for us.</p>
+  </header>
+
   <nav>
-    <a href="index.html">Home</a>
     <a href="story.html">Our Story</a>
     <a href="letters.html">Love Letters</a>
-    <a href="songs.html">Songs</a>
-    <a href="dreams.html">Dreams</a>
+    <a href="songs.html">Playlist</a>
+    <a href="dreams.html">Future Dreams</a>
     <a href="secret.html">Secret</a>
   </nav>
-  <section class="center">
-    <h1>Happy Anniversary, My Love ❤️</h1>
-    <p id="counter"></p>
-    <button onclick="playSong()">▶ Play Our Song</button>
-  </section>
-  <audio id="bgSong" src="song.mp3"></audio>
+
+  <main>
+    <section>
+      <h2>Since Our Journey Began</h2>
+      <p id="daysCounter"></p>
+    </section>
+
+    <section>
+      <h2>Countdown to Next Anniversary</h2>
+      <p id="countdown"></p>
+    </section>
+  </main>
 </body>
 </html>
+
 
